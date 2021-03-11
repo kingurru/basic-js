@@ -9,7 +9,7 @@ module.exports = function getSeason(date) {
     } else {
         const arrSeason = ['winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'summer', 'summer', 'autumn', 'autumn', 'autumn', 'winter']
         return arrSeason[date.getMonth()]
-    }
+    }q
 
 }
 
