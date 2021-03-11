@@ -4,9 +4,10 @@ const MODERN_ACTIVITY = 15;
 const HALF_LIFE_PERIOD = 5730;
 
 module.exports = function dateSample(sample) {
+
     if (typeof sample !== 'string') return false;
 
-    sample = +sample
+    sample = parseFloat(sample)
     let k = 0.693 / HALF_LIFE_PERIOD
     let t12 = Math.log(MODERN_ACTIVITY / sample)
     let time = t12 / k
