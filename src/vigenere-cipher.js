@@ -25,14 +25,11 @@ class VigenereCipheringMachine {
         while (key.length < message.length) {
             key += key
         }
-        console.log('2 key:', key, 'message:', message)
-        console.log('3 ab:', ab)
         let j = 0
         for (let i = 0; i < message.length; i++) {
             if (ab.indexOf(message[i]) < 0) str += message[i]
             else str += matrix[ab.indexOf(message[i])][ab.indexOf(key[j++])]
         }
-        console.log(str)
         return str
     }
 
